@@ -1,2 +1,10 @@
 name: Commit Stage
 on: push
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: ubuntu-20.04
+    permissions:
+      contents: read
+      security-events: write
