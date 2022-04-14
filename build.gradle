@@ -23,6 +23,7 @@ repositories {
 
 ext {
 	set('springCloudVersion', "2021.0.0")
+	set('testcontainersVersion', "1.16.2")
 }
 
 
@@ -34,17 +35,19 @@ dependencies {
 
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
-	runtimeOnly 'org.postgresql:postgresql'
 
+	runtimeOnly 'org.postgresql:postgresql'
 	annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.boot:spring-boot-starter-webflux'
+	testImplementation 'org.testcontainers:postgresql'
 }
 
 dependencyManagement {
 	imports {
 		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+		mavenBom "org.testcontainers:testcontainers-bom:${testcontainersVersion}"
 	}
 }
 
