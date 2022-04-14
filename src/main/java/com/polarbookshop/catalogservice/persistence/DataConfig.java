@@ -3,6 +3,6 @@ package com.polarbookshop.catalogservice.persistence;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jdbc.repository.config.EnableJdbcAuditing;
 
-@Configuration
-@EnableJdbcAuditing
+//@Configuration
+//@EnableJdbcAuditing
 public class DataConfig {}
