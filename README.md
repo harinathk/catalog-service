@@ -119,3 +119,8 @@ From within the PSQL console, you can also fetch all the data stored in the `boo
 ```bash
 select * from book;
 ```
+The following query is to fetch all the data stored in the `flyway_schema_history` table.
+
+```bash
+select * from flyway_schema_history;
+```
